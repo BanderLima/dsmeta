@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -14,6 +15,14 @@ const max = new Date();
 
 const [minDate, setMinDate] = useState(min);
 const [maxDate, setMaxDate] = useState(max);
+
+useEffect(() => {
+  axios.get("http://localhost:5000/sales")
+    .then(response => {
+      console.log(response.data)
+    })
+}, []);
+
 
   return (
 

@@ -11,7 +11,8 @@ import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 
 @Service
-public class SmsService {
+public class SmsService {  //todas essas variaveis sao de ambiente, q serao configuradas tanto no site do twilio e do heroku.
+	//heroku é o serviço de nuvem.
 
 	@Value("${twilio.sid}")
 	private String twilioSid;
@@ -36,6 +37,8 @@ public class SmsService {
 		
 		String msg = "Vendedor " + sale.getSellerName() + " Foi destaque em " + date + " com um total de R$ "
 		+ String.format("%.2f", sale.getAmount());
+		
+		//essa parte foi pega de dentro do twilio no exemplo de utilização.
 
 		Twilio.init(twilioSid, twilioKey);
 
