@@ -55,6 +55,12 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<dependency>
+			<groupId>com.twilio.sdk</groupId>
+			<artifactId>twilio</artifactId>
+			<version>8.31.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -62,7 +68,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.1.0</version><!--$NO-MVN-MAN-VER$-->
+				<version>3.1.0</version><!--$NO-MVN-MAN-VER$ -->
 			</plugin>
 
 			<plugin>
